@@ -9,12 +9,12 @@ import Foundation
 @testable import SephoreTest
 
 class ListDataSourceMock: ListDataSourceProtocol {
-    var isFetchedArticlesInError = false
-    var fetchedArticles: [ListItemModel] = []
-    func fetchArticles() async throws -> [SephoreTest.ListItemModel] {
-        if isFetchedArticlesInError {
+    var isFetchedItemsInError = false
+    var fetchedItems: [ListItemModel] = []
+    func fetchItems() async throws -> [SephoreTest.ListItemModel] {
+        if isFetchedItemsInError {
             throw NetworkError.serializing
         }
-        return fetchedArticles
+        return fetchedItems
     }
 }

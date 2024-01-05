@@ -16,6 +16,17 @@ struct ListItemModel: Decodable {
     let cBrand: CBrandModel
     let isProductSet: Bool
     let isSpecialBrand: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case productId = "product_id"
+        case productName = "product_name"
+        case description
+        case price
+        case imagesUrl = "images_url"
+        case cBrand = "c_brand"
+        case isProductSet = "is_productSet"
+        case isSpecialBrand = "is_special_brand"
+    }
 }
 
 struct ImagesUrlModel: Decodable {

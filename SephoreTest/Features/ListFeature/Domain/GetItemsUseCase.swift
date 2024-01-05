@@ -1,5 +1,5 @@
 //
-//  GetArticlesUseCase.swift
+//  GetItemsUseCase.swift
 //  SephoreTest
 //
 //  Created by Jeromin Lebon on 05/01/2024.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol GetArticlesUseCaseProtocol {
+protocol GetItemsUseCaseProtocol {
     func execute() async -> Result<[ListItemModel], Error>
 }
 
-final class GetArticlesUseCase: GetArticlesUseCaseProtocol {
+final class GetItemsUseCase: GetItemsUseCaseProtocol {
     private let listRepository: ListRepositoryProtocol
 
     init(listRepository: ListRepositoryProtocol = ListRepository()) {
@@ -19,6 +19,6 @@ final class GetArticlesUseCase: GetArticlesUseCaseProtocol {
     }
 
     func execute() async -> Result<[ListItemModel], Error> {
-        return await self.listRepository.getArticles()
+        return await self.listRepository.getItems()
     }
 }

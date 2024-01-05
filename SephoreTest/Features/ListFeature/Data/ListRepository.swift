@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ListRepositoryProtocol {
-    func getArticles() async -> Result<[ListItemModel], Error>
+    func getItems() async -> Result<[ListItemModel], Error>
 }
 
 final class ListRepository: ListRepositoryProtocol {
@@ -21,12 +21,12 @@ final class ListRepository: ListRepositoryProtocol {
         self.listDataSource = listDataSource
     }
 
-    func getArticles() async -> Result<[ListItemModel], Error> {
+    func getItems() async -> Result<[ListItemModel], Error> {
         if let data = self.cacheProvider.get(path: Endpoint.listing.path) as? [ListItemModel] {
             return .success(data)
         } else {
             do {
-                let data = try await self.listDataSource.fetchArticles()
+                let data = try await self.listDataSource.fetchItems()
                 return .success(data)
             } catch {
                 return .failure(error)

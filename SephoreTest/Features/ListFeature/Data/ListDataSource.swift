@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ListDataSourceProtocol {
-    func fetchArticles() async throws -> [ListItemModel]
+    func fetchItems() async throws -> [ListItemModel]
 }
 
 final class ListDataSource: ListDataSourceProtocol {
@@ -21,15 +21,15 @@ final class ListDataSource: ListDataSourceProtocol {
         self.cacheProvider = cacheProvider
     }
 
-    func fetchArticles() async throws -> [ListItemModel] {
+    func fetchItems() async throws -> [ListItemModel] {
         let data = try await self.networkProvider.request(endpoint: .listing)
 
-        guard let articles = try? JSONDecoder().decode([ListItemModel].self, from: data) else {
+        guard let items = try? JSONDecoder().decode([ListItemModel].self, from: data) else {
             throw NetworkError.serializing
         }
 
-        self.cacheProvider.set(object: articles as AnyObject, for: Endpoint.listing.path)
+        self.cacheProvider.set(object: items as AnyObject, for: Endpoint.listing.path)
 
-        return articles
+        return items
     }
 }

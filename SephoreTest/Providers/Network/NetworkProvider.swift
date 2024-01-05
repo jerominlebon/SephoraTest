@@ -9,11 +9,14 @@ import Foundation
 
 enum Endpoint {
     case listing
+    case images(String)
 
     var base: String {
         switch self {
         case .listing:
             return "https://sephoraios.github.io"
+        case.images:
+            return ""
         }
     }
 
@@ -21,6 +24,8 @@ enum Endpoint {
         switch self {
         case .listing:
             return "/items.json"
+        case .images(let url):
+            return "\(url)"
         }
     }
 }
