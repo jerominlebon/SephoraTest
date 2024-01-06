@@ -11,7 +11,28 @@ final class ListItemTableViewCellViewModel {
     let item: ListItemUIModel
     var didFetchImageClosure: ((Data?) -> ())?
 
-    init(item: ListItemUIModel) {
+    private let imageGetterUseCase: ImageGetterUseCaseProtocol
+
+    init(item: ListItemUIModel,
+         imageGetterUseCase: ImageGetterUseCaseProtocol = ImageGetterUseCase()) {
         self.item = item
+        self.imageGetterUseCase = imageGetterUseCase
+    }
+
+    func getImage() {
+        Task {
+            await self.getItemImage()
+        }
+    }
+
+    @MainActor
+    private func getItemImage() async {
+        let response = await self.imageGetterUseCase.execute(with: item.imagesUrl.small)
+        switch response {
+        case .success(let imageData):
+            didFetchImageClosure?(imageData)
+        case .failure:
+            didFetchImageClosure?(nil)
+        }
     }
 }

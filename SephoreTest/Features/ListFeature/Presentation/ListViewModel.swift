@@ -17,9 +17,12 @@ final class ListViewModel {
     var reloadTableViewClosure: (() -> ())?
     var didGetErrorClosure: (() -> ())?
     private let getItemsUseCase: GetItemsUseCaseProtocol
+    private let sortSpecialBrandsUseCase: SortSpecialBrandsUseCaseProtocol
 
-    init(getItemsUseCase: GetItemsUseCaseProtocol = GetItemsUseCase()) {
+    init(getItemsUseCase: GetItemsUseCaseProtocol = GetItemsUseCase(),
+         sortSpecialBrandsUseCase: SortSpecialBrandsUseCaseProtocol = SortSpecialBrandsUseCase()) {
         self.getItemsUseCase = getItemsUseCase
+        self.sortSpecialBrandsUseCase = sortSpecialBrandsUseCase
     }
 
     func initViewModel() {
@@ -30,15 +33,14 @@ final class ListViewModel {
 
     @MainActor
     private func getItems() async {
-        Task {
-            let response = await self.getItemsUseCase.execute()
-            switch response {
-            case .success(let items):
-                self.items = mapToUI(data: items)
-                self.mapToViewModels(items: self.items)
-            case .failure:
-                self.didGetErrorClosure?()
-            }
+        let response = await self.getItemsUseCase.execute()
+        switch response {
+        case .success(let items):
+            let sortedItems = self.sortSpecialBrandsUseCase.execute(with: items)
+            self.items = mapToUI(data: sortedItems)
+            self.mapToViewModels(items: self.items)
+        case .failure:
+            self.didGetErrorClosure?()
         }
     }
 

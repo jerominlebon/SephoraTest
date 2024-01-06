@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9BD182682B4773510044EDF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182672B4773510044EDF7 /* AppDelegate.swift */; };
 		9BD1826A2B4773510044EDF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182692B4773510044EDF7 /* SceneDelegate.swift */; };
-		9BD1826F2B4773510044EDF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1826D2B4773510044EDF7 /* Main.storyboard */; };
 		9BD182712B4773520044EDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BD182702B4773520044EDF7 /* Assets.xcassets */; };
 		9BD182742B4773520044EDF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD182722B4773520044EDF7 /* LaunchScreen.storyboard */; };
 		9BD1827F2B4773520044EDF7 /* SephoreTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1827E2B4773520044EDF7 /* SephoreTestTests.swift */; };
@@ -31,6 +30,10 @@
 		9BD182CA2B481F890044EDF7 /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182C92B481F880044EDF7 /* ListItemTableViewCell.swift */; };
 		9BD182CC2B4824270044EDF7 /* ListItemTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182CB2B4824270044EDF7 /* ListItemTableViewCellViewModel.swift */; };
 		9BD182CF2B482CD70044EDF7 /* ListFeature.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9BD182CE2B482CD70044EDF7 /* ListFeature.xcstrings */; };
+		9BD182D22B4840BB0044EDF7 /* ResourceGetterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182D12B4840BB0044EDF7 /* ResourceGetterDataSource.swift */; };
+		9BD182D52B4841CE0044EDF7 /* ResourceGetterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182D42B4841CE0044EDF7 /* ResourceGetterRepository.swift */; };
+		9BD182D82B4845C20044EDF7 /* ImageGetterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182D72B4845C20044EDF7 /* ImageGetterUseCase.swift */; };
+		9BD182DB2B484A990044EDF7 /* SortSpecialBrandsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182DA2B484A990044EDF7 /* SortSpecialBrandsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +57,6 @@
 		9BD182642B4773510044EDF7 /* SephoreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SephoreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD182672B4773510044EDF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BD182692B4773510044EDF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9BD1826E2B4773510044EDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BD182702B4773520044EDF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BD182732B4773520044EDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BD182752B4773520044EDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +81,10 @@
 		9BD182C92B481F880044EDF7 /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
 		9BD182CB2B4824270044EDF7 /* ListItemTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		9BD182CE2B482CD70044EDF7 /* ListFeature.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = ListFeature.xcstrings; sourceTree = "<group>"; };
+		9BD182D12B4840BB0044EDF7 /* ResourceGetterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceGetterDataSource.swift; sourceTree = "<group>"; };
+		9BD182D42B4841CE0044EDF7 /* ResourceGetterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceGetterRepository.swift; sourceTree = "<group>"; };
+		9BD182D72B4845C20044EDF7 /* ImageGetterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGetterUseCase.swift; sourceTree = "<group>"; };
+		9BD182DA2B484A990044EDF7 /* SortSpecialBrandsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortSpecialBrandsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,13 +135,11 @@
 		9BD182662B4773510044EDF7 /* SephoreTest */ = {
 			isa = PBXGroup;
 			children = (
+				9BD182D92B4848BD0044EDF7 /* Assets */,
 				9BD182A32B477AD10044EDF7 /* Providers */,
 				9BD1829D2B4778050044EDF7 /* Features */,
 				9BD1829C2B4777AF0044EDF7 /* AppDelegate */,
 				9BD182972B4777310044EDF7 /* AppCoordinator */,
-				9BD1826D2B4773510044EDF7 /* Main.storyboard */,
-				9BD182702B4773520044EDF7 /* Assets.xcassets */,
-				9BD182722B4773520044EDF7 /* LaunchScreen.storyboard */,
 				9BD182752B4773520044EDF7 /* Info.plist */,
 			);
 			path = SephoreTest;
@@ -179,6 +183,7 @@
 		9BD1829D2B4778050044EDF7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				9BD182D02B4840910044EDF7 /* ResourceGetter */,
 				9BD1829E2B4778210044EDF7 /* ListFeature */,
 			);
 			path = Features;
@@ -254,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				9BD182B82B47835F0044EDF7 /* GetItemsUseCase.swift */,
+				9BD182DA2B484A990044EDF7 /* SortSpecialBrandsUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -306,6 +312,41 @@
 				9BD182C72B481F120044EDF7 /* ListItemUIModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9BD182D02B4840910044EDF7 /* ResourceGetter */ = {
+			isa = PBXGroup;
+			children = (
+				9BD182D62B4845AB0044EDF7 /* Domain */,
+				9BD182D32B4841BB0044EDF7 /* Data */,
+			);
+			path = ResourceGetter;
+			sourceTree = "<group>";
+		};
+		9BD182D32B4841BB0044EDF7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9BD182D12B4840BB0044EDF7 /* ResourceGetterDataSource.swift */,
+				9BD182D42B4841CE0044EDF7 /* ResourceGetterRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9BD182D62B4845AB0044EDF7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				9BD182D72B4845C20044EDF7 /* ImageGetterUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		9BD182D92B4848BD0044EDF7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9BD182702B4773520044EDF7 /* Assets.xcassets */,
+				9BD182722B4773520044EDF7 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,7 +456,6 @@
 				9BD182CF2B482CD70044EDF7 /* ListFeature.xcstrings in Resources */,
 				9BD182742B4773520044EDF7 /* LaunchScreen.storyboard in Resources */,
 				9BD182712B4773520044EDF7 /* Assets.xcassets in Resources */,
-				9BD1826F2B4773510044EDF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,11 +482,15 @@
 			files = (
 				9BD182A52B477AE20044EDF7 /* NetworkProvider.swift in Sources */,
 				9BD182992B47773F0044EDF7 /* AppCoordinator.swift in Sources */,
+				9BD182D82B4845C20044EDF7 /* ImageGetterUseCase.swift in Sources */,
+				9BD182D52B4841CE0044EDF7 /* ResourceGetterRepository.swift in Sources */,
 				9BD182CA2B481F890044EDF7 /* ListItemTableViewCell.swift in Sources */,
 				9BD182B22B477D080044EDF7 /* ListDataSource.swift in Sources */,
 				9BD182A22B4778930044EDF7 /* ListViewModel.swift in Sources */,
 				9BD182C82B481F120044EDF7 /* ListItemUIModel.swift in Sources */,
 				9BD182682B4773510044EDF7 /* AppDelegate.swift in Sources */,
+				9BD182D22B4840BB0044EDF7 /* ResourceGetterDataSource.swift in Sources */,
+				9BD182DB2B484A990044EDF7 /* SortSpecialBrandsUseCase.swift in Sources */,
 				9BD182A02B4778320044EDF7 /* ListViewController.swift in Sources */,
 				9BD182B92B47835F0044EDF7 /* GetItemsUseCase.swift in Sources */,
 				9BD182B02B477C150044EDF7 /* ListItemModel.swift in Sources */,
@@ -493,14 +537,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9BD1826D2B4773510044EDF7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9BD1826E2B4773510044EDF7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9BD182722B4773520044EDF7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -643,7 +679,6 @@
 				INFOPLIST_FILE = SephoreTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -671,7 +706,6 @@
 				INFOPLIST_FILE = SephoreTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

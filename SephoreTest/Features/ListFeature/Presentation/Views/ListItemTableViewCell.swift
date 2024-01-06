@@ -42,6 +42,8 @@ final class ListItemTableViewCell: UITableViewCell {
     private let itemImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }()
     private let itemImageSize: CGFloat = 120
@@ -57,7 +59,7 @@ final class ListItemTableViewCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.itemImageView.image = nil
+        self.itemImageView.image = UIImage(named: "placeholder")
         self.viewModel = nil
     }
 
@@ -108,9 +110,21 @@ final class ListItemTableViewCell: UITableViewCell {
 
     func configure(with viewModel: ListItemTableViewCellViewModel) {
         self.viewModel = viewModel
+        self.bindViewModel()
+        viewModel.getImage()
         self.titleLabel.text = viewModel.item.productName
         self.descriptionLabel.text = viewModel.item.description
         self.priceLabel.text = viewModel.item.price
         self.brandLabel.text = viewModel.item.cBrand.name
+    }
+
+    private func bindViewModel() {
+        self.viewModel?.didFetchImageClosure = { [weak self] imageData in
+            if let imageData = imageData {
+                self?.itemImageView.image = UIImage(data: imageData)
+            } else {
+                self?.itemImageView.image = UIImage(named: "placeholder")
+            }
+        }
     }
 }
