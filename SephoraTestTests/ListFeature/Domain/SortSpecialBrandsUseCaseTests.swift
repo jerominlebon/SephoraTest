@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import SephoreTest
+@testable import SephoraTest
 
 final class SortSpecialBrandsUseCaseTests: XCTestCase {
     let sortSpecialBrandsUseCase: SortSpecialBrandsUseCaseProtocol = SortSpecialBrandsUseCase()

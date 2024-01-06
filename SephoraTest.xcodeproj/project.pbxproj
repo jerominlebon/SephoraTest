@@ -47,13 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9BD182642B4773510044EDF7 /* SephoreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SephoreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD182642B4773510044EDF7 /* SephoraTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SephoraTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD182672B4773510044EDF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BD182692B4773510044EDF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9BD182702B4773520044EDF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BD182732B4773520044EDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BD182752B4773520044EDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BD1827A2B4773520044EDF7 /* SephoreTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SephoreTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD1827A2B4773520044EDF7 /* SephoraTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SephoraTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD182982B47773F0044EDF7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9BD1829F2B4778320044EDF7 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		9BD182A12B4778930044EDF7 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 		9BD1825B2B4773510044EDF7 = {
 			isa = PBXGroup;
 			children = (
-				9BD182662B4773510044EDF7 /* SephoreTest */,
-				9BD1827D2B4773520044EDF7 /* SephoreTestTests */,
+				9BD182662B4773510044EDF7 /* SephoraTest */,
+				9BD1827D2B4773520044EDF7 /* SephoraTestTests */,
 				9BD182652B4773510044EDF7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,13 +109,13 @@
 		9BD182652B4773510044EDF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9BD182642B4773510044EDF7 /* SephoreTest.app */,
-				9BD1827A2B4773520044EDF7 /* SephoreTestTests.xctest */,
+				9BD182642B4773510044EDF7 /* SephoraTest.app */,
+				9BD1827A2B4773520044EDF7 /* SephoraTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9BD182662B4773510044EDF7 /* SephoreTest */ = {
+		9BD182662B4773510044EDF7 /* SephoraTest */ = {
 			isa = PBXGroup;
 			children = (
 				9BD182D92B4848BD0044EDF7 /* Assets */,
@@ -125,15 +125,15 @@
 				9BD182972B4777310044EDF7 /* AppCoordinator */,
 				9BD182752B4773520044EDF7 /* Info.plist */,
 			);
-			path = SephoreTest;
+			path = SephoraTest;
 			sourceTree = "<group>";
 		};
-		9BD1827D2B4773520044EDF7 /* SephoreTestTests */ = {
+		9BD1827D2B4773520044EDF7 /* SephoraTestTests */ = {
 			isa = PBXGroup;
 			children = (
 				9BD182BA2B4783EC0044EDF7 /* ListFeature */,
 			);
-			path = SephoreTestTests;
+			path = SephoraTestTests;
 			sourceTree = "<group>";
 		};
 		9BD182972B4777310044EDF7 /* AppCoordinator */ = {
@@ -336,9 +336,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9BD182632B4773510044EDF7 /* SephoreTest */ = {
+		9BD182632B4773510044EDF7 /* SephoraTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BD1828E2B4773520044EDF7 /* Build configuration list for PBXNativeTarget "SephoreTest" */;
+			buildConfigurationList = 9BD1828E2B4773520044EDF7 /* Build configuration list for PBXNativeTarget "SephoraTest" */;
 			buildPhases = (
 				9BD182602B4773510044EDF7 /* Sources */,
 				9BD182612B4773510044EDF7 /* Frameworks */,
@@ -348,14 +348,14 @@
 			);
 			dependencies = (
 			);
-			name = SephoreTest;
+			name = SephoraTest;
 			productName = SephoreTest;
-			productReference = 9BD182642B4773510044EDF7 /* SephoreTest.app */;
+			productReference = 9BD182642B4773510044EDF7 /* SephoraTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9BD182792B4773520044EDF7 /* SephoreTestTests */ = {
+		9BD182792B4773520044EDF7 /* SephoraTestTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BD182912B4773520044EDF7 /* Build configuration list for PBXNativeTarget "SephoreTestTests" */;
+			buildConfigurationList = 9BD182912B4773520044EDF7 /* Build configuration list for PBXNativeTarget "SephoraTestTests" */;
 			buildPhases = (
 				9BD182762B4773520044EDF7 /* Sources */,
 				9BD182772B4773520044EDF7 /* Frameworks */,
@@ -366,9 +366,9 @@
 			dependencies = (
 				9BD1827C2B4773520044EDF7 /* PBXTargetDependency */,
 			);
-			name = SephoreTestTests;
+			name = SephoraTestTests;
 			productName = SephoreTestTests;
-			productReference = 9BD1827A2B4773520044EDF7 /* SephoreTestTests.xctest */;
+			productReference = 9BD1827A2B4773520044EDF7 /* SephoraTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -390,7 +390,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9BD1825F2B4773510044EDF7 /* Build configuration list for PBXProject "SephoreTest" */;
+			buildConfigurationList = 9BD1825F2B4773510044EDF7 /* Build configuration list for PBXProject "SephoraTest" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -403,8 +403,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9BD182632B4773510044EDF7 /* SephoreTest */,
-				9BD182792B4773520044EDF7 /* SephoreTestTests */,
+				9BD182632B4773510044EDF7 /* SephoraTest */,
+				9BD182792B4773520044EDF7 /* SephoraTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -473,7 +473,7 @@
 /* Begin PBXTargetDependency section */
 		9BD1827C2B4773520044EDF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9BD182632B4773510044EDF7 /* SephoreTest */;
+			target = 9BD182632B4773510044EDF7 /* SephoraTest */;
 			targetProxy = 9BD1827B2B4773520044EDF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -618,7 +618,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99BX55LUM5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SephoreTest/Info.plist;
+				INFOPLIST_FILE = SephoraTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -628,7 +628,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jerominlebon.SephoreTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerominlebon.SephoraTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -645,7 +645,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99BX55LUM5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SephoreTest/Info.plist;
+				INFOPLIST_FILE = SephoraTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -655,7 +655,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jerominlebon.SephoreTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerominlebon.SephoraTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -679,7 +679,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SephoreTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SephoreTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SephoraTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SephoraTest";
 			};
 			name = Debug;
 		};
@@ -699,14 +699,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SephoreTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SephoreTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SephoraTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SephoraTest";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9BD1825F2B4773510044EDF7 /* Build configuration list for PBXProject "SephoreTest" */ = {
+		9BD1825F2B4773510044EDF7 /* Build configuration list for PBXProject "SephoraTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9BD1828C2B4773520044EDF7 /* Debug */,
@@ -715,7 +715,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BD1828E2B4773520044EDF7 /* Build configuration list for PBXNativeTarget "SephoreTest" */ = {
+		9BD1828E2B4773520044EDF7 /* Build configuration list for PBXNativeTarget "SephoraTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9BD1828F2B4773520044EDF7 /* Debug */,
@@ -724,7 +724,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BD182912B4773520044EDF7 /* Build configuration list for PBXNativeTarget "SephoreTestTests" */ = {
+		9BD182912B4773520044EDF7 /* Build configuration list for PBXNativeTarget "SephoraTestTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9BD182922B4773520044EDF7 /* Debug */,

@@ -6,12 +6,12 @@
 //
 
 import Foundation
-@testable import SephoreTest
+@testable import SephoraTest
 
 class ListDataSourceMock: ListDataSourceProtocol {
     var isFetchedItemsInError = false
     var fetchedItems: [ListItemModel] = []
-    func fetchItems() async throws -> [SephoreTest.ListItemModel] {
+    func fetchItems() async throws -> [SephoraTest.ListItemModel] {
         if isFetchedItemsInError {
             throw NetworkError.serializing
         }

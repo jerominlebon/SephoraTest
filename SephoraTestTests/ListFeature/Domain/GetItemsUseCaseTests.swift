@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import SephoreTest
+@testable import SephoraTest
 
 final class GetItemsUseCaseTests: XCTestCase {
     var mock = ListDataSourceMock()
