@@ -18,6 +18,12 @@ class ListViewController: UIViewController {
         tableView.dataSource = self
         return tableView
     }()
+    private lazy var errorView: ErrorView = {
+        let errorView = ErrorView()
+        errorView.translatesAutoresizingMaskIntoConstraints = false
+        errorView.delegate = self
+        return errorView
+    }()
 
     override func viewDidLoad() {
         self.view.backgroundColor = .systemBackground
@@ -29,17 +35,34 @@ class ListViewController: UIViewController {
 
     private func setupUI() {
         self.view.addSubview(self.tableView)
+        self.view.addSubview(self.errorView)
+
+        // MARK: - TableView
         NSLayoutConstraint.activate([
             self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
             self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             self.tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
+
+        // MARK: - ErrorView
+        NSLayoutConstraint.activate([
+            self.errorView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.errorView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            self.errorView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.errorView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+        ])
+        self.errorView.isHidden = true
     }
 
     private func bindViewModel() {
         self.viewModel.reloadTableViewClosure = { [weak self] in
+            self?.errorView.isHidden = true
             self?.tableView.reloadData()
+        }
+
+        self.viewModel.didGetErrorClosure = { [weak self] in
+            self?.errorView.isHidden = false
         }
     }
 }
@@ -55,5 +78,11 @@ extension ListViewController: UITableViewDataSource {
         }
         cell.configure(with: self.viewModel.cellViewModels[indexPath.row])
         return cell
+    }
+}
+
+extension ListViewController: ErrorViewDelegate {
+    func didTapRetryButton() {
+        self.viewModel.initViewModel()
     }
 }

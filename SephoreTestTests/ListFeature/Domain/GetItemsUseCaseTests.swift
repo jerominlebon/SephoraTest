@@ -43,6 +43,7 @@ final class GetItemsUseCaseTests: XCTestCase {
 
     override func tearDownWithError() throws {
         self.mock.fetchedItems = []
+        self.mock.isFetchedItemsInError = false
     }
 
     func testFetchArticles() async throws {

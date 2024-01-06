@@ -33,6 +33,7 @@
 		9BD182DB2B484A990044EDF7 /* SortSpecialBrandsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182DA2B484A990044EDF7 /* SortSpecialBrandsUseCase.swift */; };
 		9BD182DD2B48DDF20044EDF7 /* SortSpecialBrandsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182DC2B48DDF20044EDF7 /* SortSpecialBrandsUseCaseTests.swift */; };
 		9BD182E02B48DFAA0044EDF7 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182DF2B48DFAA0044EDF7 /* ListViewModelTests.swift */; };
+		9BD182E22B48E84B0044EDF7 /* ListErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD182E12B48E84B0044EDF7 /* ListErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		9BD182DA2B484A990044EDF7 /* SortSpecialBrandsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortSpecialBrandsUseCase.swift; sourceTree = "<group>"; };
 		9BD182DC2B48DDF20044EDF7 /* SortSpecialBrandsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortSpecialBrandsUseCaseTests.swift; sourceTree = "<group>"; };
 		9BD182DF2B48DFAA0044EDF7 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
+		9BD182E12B48E84B0044EDF7 /* ListErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +277,7 @@
 			children = (
 				9BD182C92B481F880044EDF7 /* ListItemTableViewCell.swift */,
 				9BD182CB2B4824270044EDF7 /* ListItemTableViewCellViewModel.swift */,
+				9BD182E12B48E84B0044EDF7 /* ListErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				9BD182CA2B481F890044EDF7 /* ListItemTableViewCell.swift in Sources */,
 				9BD182B22B477D080044EDF7 /* ListDataSource.swift in Sources */,
 				9BD182A22B4778930044EDF7 /* ListViewModel.swift in Sources */,
+				9BD182E22B48E84B0044EDF7 /* ListErrorView.swift in Sources */,
 				9BD182C82B481F120044EDF7 /* ListItemUIModel.swift in Sources */,
 				9BD182682B4773510044EDF7 /* AppDelegate.swift in Sources */,
 				9BD182D22B4840BB0044EDF7 /* ResourceGetterDataSource.swift in Sources */,

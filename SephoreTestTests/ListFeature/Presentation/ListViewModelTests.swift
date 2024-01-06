@@ -75,4 +75,13 @@ final class ListViewModelTests: XCTestCase {
 
         await self.listViewModel.getItems()
     }
+
+    func testErrorRetrievingDatas() async {
+        self.mock.isFetchedItemsInError = true
+        self.listViewModel.didGetErrorClosure = { [weak self] in
+            XCTAssertEqual(self?.listViewModel.items.count, 0)
+        }
+
+        await self.listViewModel.getItems()
+    }
 }
