@@ -14,7 +14,7 @@ protocol CacheProviderProtocol {
 
 final class CacheProvider: CacheProviderProtocol {
     public static let shared = CacheProvider()
-    lazy var cache: NSCache<AnyObject, AnyObject> = {
+    private let cache: NSCache<AnyObject, AnyObject> = {
         let cache = NSCache<AnyObject, AnyObject>()
         cache.countLimit = 100
         cache.totalCostLimit = 1024 * 1024 * 100
@@ -22,11 +22,11 @@ final class CacheProvider: CacheProviderProtocol {
     }()
 
     func set(object: AnyObject, for path: String) {
-        cache.setObject(object, forKey: path as AnyObject)
+        self.cache.setObject(object, forKey: path as AnyObject)
     }
 
     func get(path: String) -> AnyObject? {
-        let cachedObject = cache.object(forKey: path as AnyObject)
+        let cachedObject = self.cache.object(forKey: path as AnyObject)
         return cachedObject
     }
 }

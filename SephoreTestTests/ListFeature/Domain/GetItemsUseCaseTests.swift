@@ -14,7 +14,7 @@ final class GetItemsUseCaseTests: XCTestCase {
     var getItemsUseCase: GetItemsUseCaseProtocol!
 
     override func setUpWithError() throws {
-        self.listRepository = ListRepository(listDataSource: self.mock)
+        self.listRepository = ListRepository(listDataSource: self.mock, shouldUseCache: false)
         self.getItemsUseCase = GetItemsUseCase(listRepository: self.listRepository)
 
         self.mock.fetchedItems = [

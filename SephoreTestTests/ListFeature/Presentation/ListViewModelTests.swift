@@ -15,7 +15,7 @@ final class ListViewModelTests: XCTestCase {
     var mock = ListDataSourceMock()
 
     override func setUpWithError() throws {
-        self.listRepository = ListRepository(listDataSource: self.mock)
+        self.listRepository = ListRepository(listDataSource: self.mock, shouldUseCache: false)
         self.getItemsUseCase = GetItemsUseCase(listRepository: self.listRepository)
         self.listViewModel = ListViewModel(getItemsUseCase: self.getItemsUseCase)
 

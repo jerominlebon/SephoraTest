@@ -10,7 +10,7 @@ import UIKit
 final class ListItemTableViewCell: UITableViewCell {
     static let reuseIdentifier = "ListItemTableViewCell"
     
-    var viewModel: ListItemTableViewCellViewModel?
+    private var viewModel: ListItemTableViewCellViewModel?
 
     private let titleLabel: UILabel = {
         let label = UILabel()

@@ -14,15 +14,19 @@ protocol ListRepositoryProtocol {
 final class ListRepository: ListRepositoryProtocol {
     private let cacheProvider: CacheProviderProtocol
     private let listDataSource: ListDataSourceProtocol
+    private let shouldUseCache: Bool
 
     init(cacheProvider: CacheProviderProtocol = CacheProvider.shared,
-         listDataSource: ListDataSourceProtocol = ListDataSource()) {
+         listDataSource: ListDataSourceProtocol = ListDataSource(),
+         shouldUseCache: Bool = true) {
         self.cacheProvider = cacheProvider
         self.listDataSource = listDataSource
+        self.shouldUseCache = shouldUseCache
     }
 
     func getItems() async -> Result<[ListItemModel], Error> {
-        if let data = self.cacheProvider.get(path: Endpoint.listing.path) as? [ListItemModel] {
+        if let data = self.cacheProvider.get(path: Endpoint.listing.path) as? [ListItemModel],
+           self.shouldUseCache {
             return .success(data)
         } else {
             do {
