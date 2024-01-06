@@ -17,7 +17,7 @@ final class GetItemsUseCaseTests: XCTestCase {
         self.listRepository = ListRepository(listDataSource: self.mock)
         self.getItemsUseCase = GetItemsUseCase(listRepository: self.listRepository)
 
-        mock.fetchedItems = [
+        self.mock.fetchedItems = [
             ListItemModel(
                 productId: 0,
                 productName: "MakeUp",
@@ -42,7 +42,7 @@ final class GetItemsUseCaseTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        mock.fetchedItems = []
+        self.mock.fetchedItems = []
     }
 
     func testFetchArticles() async throws {

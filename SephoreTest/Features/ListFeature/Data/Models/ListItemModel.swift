@@ -29,12 +29,12 @@ struct ListItemModel: Decodable {
     }
 }
 
-struct ImagesUrlModel: Decodable {
+struct ImagesUrlModel: Decodable, Equatable {
     let small: String
     let large: String
 }
 
-struct CBrandModel: Decodable {
+struct CBrandModel: Decodable, Equatable {
     let id: String
     let name: String
 }

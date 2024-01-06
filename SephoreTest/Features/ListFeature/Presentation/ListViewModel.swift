@@ -8,7 +8,7 @@
 import Foundation
 
 final class ListViewModel {
-    private var items: [ListItemUIModel] = []
+    internal var items: [ListItemUIModel] = []
     var cellViewModels: [ListItemTableViewCellViewModel] = [] {
         didSet {
             self.reloadTableViewClosure?()
@@ -32,7 +32,7 @@ final class ListViewModel {
     }
 
     @MainActor
-    private func getItems() async {
+    internal func getItems() async {
         let response = await self.getItemsUseCase.execute()
         switch response {
         case .success(let items):

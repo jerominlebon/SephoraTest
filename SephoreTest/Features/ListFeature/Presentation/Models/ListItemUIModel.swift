@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListItemUIModel {
+struct ListItemUIModel: Equatable {
     let productId: Int
     let productName: String
     let description: String
